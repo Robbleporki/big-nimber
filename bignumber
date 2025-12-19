@@ -1,0 +1,25 @@
+import java.math.BigInteger;
+
+public class PerformanceTips {
+    public static void main(String[] args) {
+        // 1. Use constants when possible
+        BigInteger zero = BigInteger.ZERO;
+        BigInteger one = BigInteger.ONE;
+        BigInteger ten = BigInteger.TEN;
+
+        // 2. Reuse BigInteger objects
+        BigInteger result = BigInteger.ONE;
+        for (int i = 1; i <= 1000; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
+        }
+
+        // 3. Use valueOf for small integers
+        BigInteger small = BigInteger.valueOf(42); // Better than new BigInteger("42")
+
+        // 4. Consider using primitives when possible
+        // If numbers fit in long (up to 9,223,372,036,854,775,807), use long
+
+        // 5. For repeated operations, cache results
+        System.out.println("Result: " + result);
+    }
+}
