@@ -51,7 +51,7 @@ public class CalculatorInt {
             default:
                 System.out.println("\nخطا: عملیات نامعتبر!");
         }
-        
+        ;
         scanner.close();
     }
 }
